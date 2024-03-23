@@ -28,7 +28,8 @@ app.use((req, res, next) => {
 
 const onServerStart = async () => {
     try {
-        await CommonUtil.connectDb(process.env.MONGO_BASE_URL);
+        // await CommonUtil.connectDb(process.env.MONGO_BASE_URL);
+        await CommonUtil.connectDb("mongodb+srv://ammar:ammar123@vehicle.hsros5q.mongodb.net/SafeDrive");
 
         app.listen(process.env.SERVER_PORT || 4000, async() => {
             console.log(`Server is running on port ${process.env.SERVER_PORT || 4000}`);
