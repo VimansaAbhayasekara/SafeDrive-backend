@@ -5,6 +5,7 @@
 import { Document } from "mongoose";
 
 interface IAuth {
+    name: string;
     email: string;
     password: string;
     role: string;

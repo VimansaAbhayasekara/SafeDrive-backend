@@ -7,6 +7,10 @@ import { IAuthModel } from "./auth.interface";
 import mongoose, { Schema } from "mongoose";
 
 const AuthSchema: Schema<IAuthModel> = new mongoose.Schema({
+    name: {
+        type: String,
+        required: [true, "Name is required"],
+    },
     email: {
         type: String,
         validate: {
